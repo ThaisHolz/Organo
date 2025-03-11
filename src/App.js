@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner.js';
 import Formulario from './componentes/Formulario/Formulario.js';
 import Time from './componentes/Time/Time.js';
+import Rodape from './componentes/Rodape/Rodape.js';
 
 function App() {
   //Lista de times com suas cores, com essa lista usandos o .map no Formulario
@@ -28,7 +29,7 @@ function App() {
         corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)} 
       />)}
-
+      <Rodape />
     </div>
   );
 }
