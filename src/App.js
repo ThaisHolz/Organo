@@ -16,13 +16,16 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
   const novoColaboradorAdd = (colaborador) => {
     console.log(colaborador);
-    setColaboradores([...colaboradores, colaborador]); //Espalhando os colaboradores antigos e add o novo no final
+    //Espalhando os colaboradores antigos e add o novo no final
+    setColaboradores([...colaboradores, colaborador]); 
   }
   
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado ={colaborador => novoColaboradorAdd(colaborador)}/>  
+      <Formulario times={times.map(time => time.nome)} 
+        aoColaboradorCadastrado ={colaborador => novoColaboradorAdd(colaborador)}
+      />  
 
       {times.map(time => <Time 
         key={time.nome} nome={time.nome} 
